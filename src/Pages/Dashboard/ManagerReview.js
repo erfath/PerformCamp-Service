@@ -17,7 +17,7 @@ const ManagerReview = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://whispering-gorge-29329.herokuapp.com/pendingReview/${user?.email}`, {
+            fetch(`https://performcamp-server.onrender.com/pendingReview/${user?.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -49,7 +49,7 @@ const ManagerReview = () => {
         }
 
         if (rating >= 1 && rating <= 5) {
-            fetch(`https://whispering-gorge-29329.herokuapp.com/employeeReviews`, {
+            fetch(`https://performcamp-server.onrender.com/employeeReviews`, {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"
@@ -68,7 +68,7 @@ const ManagerReview = () => {
 
                 })
 
-            fetch(`https://whispering-gorge-29329.herokuapp.com/pendingReview/${review._id}`, {
+            fetch(`https://performcamp-server.onrender.com/pendingReview/${review._id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -113,7 +113,7 @@ const ManagerReview = () => {
             
         }
 
-        fetch('https://whispering-gorge-29329.herokuapp.com/feedback', {
+        fetch('https://performcamp-server.onrender.com/feedback', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -130,7 +130,7 @@ const ManagerReview = () => {
 
             })
 
-        fetch(`https://whispering-gorge-29329.herokuapp.com/pendingReview/${review._id}`, {
+        fetch(`https://performcamp-server.onrender.com/pendingReview/${review._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

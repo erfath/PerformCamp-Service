@@ -48,7 +48,7 @@ export default function UpdateModal({ id, setIsReload, isReload }) {
       setIsOpen(false);
     }
 
-    fetch(`https://whispering-gorge-29329.herokuapp.com/task/${id}`, {
+    fetch(`https://performcamp-server.onrender.com/task/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

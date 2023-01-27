@@ -19,7 +19,7 @@ const AddTask = () => {
 
         console.log(data)
 
-        fetch('https://whispering-gorge-29329.herokuapp.com/task', {
+        fetch('https://performcamp-server.onrender.com/task', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

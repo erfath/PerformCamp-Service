@@ -29,7 +29,7 @@ const AddEmployee = () => {
                         designation: data.designation,
                         img: img
                     }
-                    fetch('https://whispering-gorge-29329.herokuapp.com/employee', {
+                    fetch('https://performcamp-server.onrender.com/employee', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json',

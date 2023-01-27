@@ -8,7 +8,7 @@ const useManager = (user) => {
       const email = user?.email;
     
       if(email){
-        fetch(`https://whispering-gorge-29329.herokuapp.com/manager/${email}`, {
+        fetch(`https://performcamp-server.onrender.com/manager/${email}`, {
             method: 'GET',
             headers: {
                 'content-type' : 'application/json',

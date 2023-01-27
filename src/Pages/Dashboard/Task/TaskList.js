@@ -17,7 +17,7 @@ const TaskList = () => {
     useEffect(() => {
 
         if(user){
-            fetch(`https://whispering-gorge-29329.herokuapp.com/managerTask/${user?.email}`, {
+            fetch(`https://performcamp-server.onrender.com/managerTask/${user?.email}`, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -34,7 +34,7 @@ const TaskList = () => {
 
     const handleDelete = (task) => {
 
-        fetch(`https://whispering-gorge-29329.herokuapp.com/task/${task._id}`, {
+        fetch(`https://performcamp-server.onrender.com/task/${task._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
